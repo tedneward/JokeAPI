@@ -1,0 +1,38 @@
+{
+  "name": "Joke",
+  "plural": "Jokes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Setup": {
+      "type": "string"
+    },
+    "Punchline": {
+      "type": "string",
+      "required": true
+    },
+    "Categories": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "LOLCount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "GroanCount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
