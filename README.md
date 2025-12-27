@@ -44,3 +44,5 @@ Prompts used:
 
 > "Scaffold a minimal Javalin implementation in a directory called "minimal" that satisfies this spec (using constant return values--do not use a database for this implementation)." ... "Upgrade the "minimal" project to use Java 21." ... "Add a .gitignore" to the "minimal" directory for Maven builds."
 
+> "Create a full-fledged Java+Javalin implementation, according to the rules stipulated in this project, in the "javalin" directory. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use Java 21. Use features available to Java 21 (like record tyeps) to simplify the code. Use Gradle for the build and tests. Make sure the unit tests pass, then make sure the "tests" scripts pass." ... "Modify the Gradle build to build a fat JAR for easier start." 
+
