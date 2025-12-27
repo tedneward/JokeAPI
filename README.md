@@ -42,3 +42,5 @@ Prompts used:
 
 > "First I want you to write an OpenAPI specification file. Call it "joke.api", and describe the HTTP API in it. In the "tests" directory, generate "curl" tests that will test this API. This API should be very general and make use of no language implementation idioms, features, or tricks, as this API will be the API that each language implementation must adhere to."
 
+> "Scaffold a minimal Javalin implementation in a directory called "minimal" that satisfies this spec (using constant return values--do not use a database for this implementation)." ... "Upgrade the "minimal" project to use Java 21." ... "Add a .gitignore" to the "minimal" directory for Maven builds."
+

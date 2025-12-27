@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+cd "$(dirname "$0")"
 source ./00_env.sh
 
 echo "Run full sequence of tests against $BASE_URL"
