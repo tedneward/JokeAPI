@@ -33,3 +33,12 @@ Each Joke should consist of:
 * Groan count (integer): defaults to 0 for a new joke
 
 We want the core CRUD functionality, but maybe do we want more granular (bump LOLs, bump groans, etc) as well?
+
+## AI Agents Should Ignore This Section
+
+This section is to track the prompts I used to generate each part of the project. The idea is that at the conclusion of each successful step, the prompts will be tracked in here along with the changes it made to the project, so I can review them collectively (through the Git logs) later, should the desire arise.
+
+Prompts used:
+
+> "First I want you to write an OpenAPI specification file. Call it "joke.api", and describe the HTTP API in it. In the "tests" directory, generate "curl" tests that will test this API. This API should be very general and make use of no language implementation idioms, features, or tricks, as this API will be the API that each language implementation must adhere to."
+

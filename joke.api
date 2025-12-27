@@ -1,0 +1,194 @@
+openapi: 3.0.3
+info:
+  title: JokeAPI
+  version: "1.0.0"
+  description: |
+    Portable HTTP API specification for the Joke database used by all language implementations.
+servers:
+  - url: http://localhost:8000
+paths:
+  /jokes:
+    get:
+      summary: List jokes
+      description: Retrieve a paginated list of jokes. Supports filtering by `source` and `category`.
+      parameters:
+        - in: query
+          name: source
+          schema:
+            type: string
+          description: Filter by source text
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Filter by category text
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 100
+        - in: query
+          name: offset
+          schema:
+            type: integer
+            default: 0
+      responses:
+        '200':
+          description: A list of jokes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Joke'
+    post:
+      summary: Create a new joke
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JokeCreate'
+      responses:
+        '201':
+          description: Joke created
+          headers:
+            Location:
+              description: URL of created joke
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+  /jokes/random:
+    get:
+      summary: Get a random joke
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Optional category to limit random selection
+      responses:
+        '200':
+          description: A single random joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+        '404':
+          description: No jokes found
+  /jokes/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get a joke by ID
+      responses:
+        '200':
+          description: A joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+        '404':
+          description: Not found
+    put:
+      summary: Replace a joke
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JokeCreate'
+      responses:
+        '200':
+          description: Updated joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Joke'
+        '404':
+          description: Not found
+    delete:
+      summary: Delete a joke
+      responses:
+        '204':
+          description: Deleted
+        '404':
+          description: Not found
+  /jokes/{id}/bump-lol:
+    post:
+      summary: Increment the LOL count for a joke
+      responses:
+        '200':
+          description: New counts for the joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CountsResponse'
+        '404':
+          description: Not found
+  /jokes/{id}/bump-groan:
+    post:
+      summary: Increment the groan count for a joke
+      responses:
+        '200':
+          description: New counts for the joke
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CountsResponse'
+        '404':
+          description: Not found
+components:
+  schemas:
+    Joke:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the joke (server-generated)
+        setup:
+          type: string
+        punchline:
+          type: string
+        category:
+          type: string
+          description: Category name; empty string if unspecified
+        source:
+          type: string
+          description: Source/author of the joke; default assumed if empty
+        lolCount:
+          type: integer
+          description: Number of times users LOL'd
+        groanCount:
+          type: integer
+          description: Number of times users groaned
+      required: [id, setup, punchline]
+    JokeCreate:
+      type: object
+      properties:
+        setup:
+          type: string
+        punchline:
+          type: string
+        category:
+          type: string
+        source:
+          type: string
+      required: [setup, punchline]
+    CountsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        lolCount:
+          type: integer
+        groanCount:
+          type: integer
+      required: [id, lolCount, groanCount]
