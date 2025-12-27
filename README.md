@@ -1,7 +1,28 @@
 # JokeAPI
-An API (implemented in different languages and platforms) for a simple CRUD joke database
+An API implemented in different languages and platforms for a joke database.
 
-## Goals
+The language/platforms:
+
+* `ballerina`: The Ballerina programming language
+* `javalin`: The Java programming language, using the Javalin framework.
+* `jolie`: The Jolie programming langauage.
+* `loopbackjs`: The JavaScript programming language, using the LoopbackJS framework.
+* `orleans`: The C# programming language, using the Microsoft Orleans framework.
+
+The `tests` directory should contain `curl`-based tests to do end-to-end testing of any of the implementations.
+
+Each implementation should use port 8000 as its HTTP port, and have an API root of `/jokes`.
+
+## API
+The API should be HTTP-based, require no authentication, consist of:
+
+* a core CRUD interface for Jokes (described below)
+* search for a random joke
+* search for a random joke within a given category
+* search for all the jokes from a given source
+* have a `POST` endpoint to increment the "LOL count" for a given Joke
+* have a `POST` endpoint to increment the "groan count" for a given Joke
+
 Each Joke should consist of:
 
 * setup text. ("Why did the chicken cross the road?")
@@ -12,17 +33,3 @@ Each Joke should consist of:
 * Groan count (integer): defaults to 0 for a new joke
 
 We want the core CRUD functionality, but maybe do we want more granular (bump LOLs, bump groans, etc) as well?
-
-
-
-## Implementations
-Each directory holds its own implementation.
-
-### `loopback`: LoopbackJS
-Built this back in 2017 as part of either the MSDN column or the developerWorks column, I can't remember which. Used it briefly as part of the Angular workshop. Feels like we got the very basic CRUD functionality that's built-in to Loopback and never took it further. :-/
-
-### `ballerina`: Ballerina
-Idle fiddling with Ballerina to build the same thing. Ballerina's `isolated` is definitely just as cranky as C++'s `const` was/is.
-
-### `jolie`: Jolie
-Let's build one using Jolie and see how well that holds up.
