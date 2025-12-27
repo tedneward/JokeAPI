@@ -25,3 +25,6 @@ These rules apply to any automated or AI-assisted code changes.
 ## When Unsure
 - Ask clarifying questions before making assumptions
 
+## Consistency
+- Each time tests are passing, ask about committing code to Git
+- Never delete or commit anything without asking first
