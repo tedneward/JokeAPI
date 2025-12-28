@@ -58,3 +58,13 @@ tasks.register<Jar>("fatJar") {
 tasks.named("build") {
     dependsOn(tasks.named("fatJar"))
 }
+
+// Docker build task (requires Docker installed and running)
+tasks.register<Exec>("dockerBuild") {
+    dependsOn(tasks.named("fatJar"))
+    group = "distribution"
+    description = "Builds a Docker image containing the fat JAR"
+    commandLine("docker", "build", "-t", "javalin-joke:latest", ".")
+    workingDir = project.layout.projectDirectory.asFile
+}
+
