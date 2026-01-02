@@ -4,6 +4,7 @@ An API implemented in different languages and platforms for a joke database.
 The language/platforms:
 
 * `ballerina`: The Ballerina programming language
+* `csharp`: The C# programming language, using ASP.NET WebAPI
 * `javalin`: The Java programming language, using the Javalin framework.
 * `jolie`: The Jolie programming langauage.
 * `loopbackjs`: The JavaScript programming language, using the LoopbackJS framework.
@@ -49,4 +50,6 @@ Prompts used:
 > "Create a full-fledged Javascript backend implementation in the "nestjs" directory using the NestJS framework. It must follow the rules stipulated in this project. Make sure this project has unit tests to test the functionality of the domain and persistence layers. Use the latest NodeJS implementation. Follow all relevant Javascript idioms, such as the use of npm. Make sure the unit tests pass, then create a build task in npm that puts the resulting application into a Docker image. Once the Docker image is built, run the Docker image and test it using the curl scripts."
 
 > "Create a Python script in the "tests" directory to do the same tests but within a single Python script. Make sure the HTTP calls are the same." ... "Create a "test_all" bash script that runs each of the language implementation Docker images, one at a time, and invokes the `tests/run_tests.py` script each time."
+
+> "Create a full-fledged C# and ASP.NET WebAPI implementation, according to the rules stipulated in this project, in the "csharp" directory. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use the latest .NET language and runtime. Use the .NET CLI for the build and use MSTest for the unit tests. Make sure the unit tests pass, then make sure the "tests" scripts pass. Create a build task that takes the final assembly built and puts it into a Docker image. This Docker image should use the host's port 8000 to accept traffic, and should not use any host storage (no volumes). When that's done, run the Docker image and test it using the curl scripts."
 

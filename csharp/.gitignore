@@ -1,0 +1,42 @@
+## .gitignore for .NET projects
+
+# Build Folders
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Publish output
+publish/
+
+# NuGet
+*.nupkg
+**/packages/
+project.lock.json
+
+# SQLite DBs and journals
+*.db
+*.db-journal
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Test results and temporary files
+TestResults/
+.testsettings
+
+# Secrets
+secrets.json
+appsettings.*.Local.json
