@@ -51,3 +51,40 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+// Produce a fat JAR by unpacking runtime dependencies
+tasks.register<Jar>("fatJar") {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("kotlin-joke-all")
+    archiveClassifier.set("")
+    archiveVersion.set("")
+    manifest {
+        attributes("Main-Class" to "com.example.ApplicationKt")
+    }
+    from(sourceSets.main.get().output)
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith(".jar") }.map { zipTree(it) }
+    }) {
+        exclude("META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "META-INF/*.SF*", "META-INF/LICENSE*")
+    }
+}
+
+tasks.named("build") {
+    dependsOn(tasks.named("fatJar"))
+}
+
+ktor {
+    fatJar {
+        archiveFileName.set("ktor-app.jar")
+    }
+}
+
+// Docker build task (requires Docker installed and running)
+tasks.register<Exec>("dockerBuild") {
+    dependsOn(tasks.named("fatJar"))
+    group = "distribution"
+    description = "Builds a Docker image containing the fat JAR"
+    commandLine("docker", "build", "-t", "jokeapi-kotlin:latest", "..")
+    workingDir = project.layout.projectDirectory.asFile
+}

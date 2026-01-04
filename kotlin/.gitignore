@@ -7,3 +7,5 @@ build
 # Ignore Kotlin/Native build output directory
 .kotlincache
 
+# Temporary files
+jokes.db

@@ -64,7 +64,7 @@ tasks.register<Exec>("dockerBuild") {
     dependsOn(tasks.named("fatJar"))
     group = "distribution"
     description = "Builds a Docker image containing the fat JAR"
-    commandLine("docker", "build", "-t", "javalin-joke:latest", ".")
+    commandLine("docker", "build", "-t", "jokeapi-javalin:latest", ".")
     workingDir = project.layout.projectDirectory.asFile
 }
 
