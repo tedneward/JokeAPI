@@ -7,6 +7,7 @@ The language/platforms:
 * `csharp`: The C# programming language, using ASP.NET WebAPI
 * `javalin`: The Java programming language, using the Javalin framework.
 * `jolie`: The Jolie programming langauage.
+* `kotlin`: The Kotlin programming language.
 * `loopbackjs`: The JavaScript programming language, using the LoopbackJS framework.
 * `orleans`: The C# programming language, using the Microsoft Orleans framework.
 
@@ -52,4 +53,6 @@ Prompts used:
 > "Create a Python script in the "tests" directory to do the same tests but within a single Python script. Make sure the HTTP calls are the same." ... "Create a "test_all" bash script that runs each of the language implementation Docker images, one at a time, and invokes the `tests/run_tests.py` script each time."
 
 > "Create a full-fledged C# and ASP.NET WebAPI implementation, according to the rules stipulated in this project, in the "csharp" directory. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use the latest .NET language and runtime. Use the .NET CLI for the build and use MSTest for the unit tests. Make sure the unit tests pass, then make sure the "tests" scripts pass. Create a build task that takes the final assembly built and puts it into a Docker image. This Docker image should use the host's port 8000 to accept traffic, and should not use any host storage (no volumes). When that's done, run the Docker image and test it using the curl scripts."
+
+> "Create a full-fledged Kotlin HTTP API implementation using Ktor, according to the rules stipulated in this project, in the "kotlin" directory. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use the latest Kotlin language and runtime. Use Gradle for the build and JUnit 5 for the unit tests. Make sure the unit tests pass, then make sure the "tests" scripts pass. Create a build task that takes the final "fatJAR" built and puts it into a Docker image. This Docker image should use the host's port 8000 to accept traffic, and should not use any host storage (no volumes). When that's done, run the Docker image and test it using the curl scripts."
 

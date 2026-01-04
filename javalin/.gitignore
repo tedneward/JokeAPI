@@ -6,6 +6,7 @@
 *.iml
 /.classpath
 /.project
+/bin/
 
 # Gradle Wrapper
 /gradle/wrapper/gradle-wrapper.jar
