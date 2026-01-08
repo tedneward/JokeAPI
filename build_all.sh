@@ -9,3 +9,6 @@ cd kotlin; ./gradlew dockerBuild; cd ..
 
 # Build nestjs Docker image
 cd nestjs; npm run docker-build; cd ..
+
+# Build python Docker image
+cd python; ./build_docker.sh; cd ..
