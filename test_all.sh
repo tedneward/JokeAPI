@@ -2,12 +2,12 @@
 set -euo pipefail
 
 # Default images to test; override by passing image names as args
-images=("javalin-joke:latest" "nestjs-joke:latest")
+images=("jokeapi-javalin:latest" "jokeapi-nestjs:latest" "jokeapi-kotlin:latest" "jokeapi-csharp:latest")
 if [ "$#" -gt 0 ]; then
   images=("$@")
 fi
 
-repo_root="$(cd "$(dirname "$0")/.." && pwd)"
+repo_root="$(cd "$(dirname "$0")" && pwd)"
 failures=0
 
 for img in "${images[@]}"; do
