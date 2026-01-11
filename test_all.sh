@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Default images to test; override by passing image names as args
-images=("jokeapi-csharp:latest" "jokeapi-javalin:latest" "jokeapi-kotlin:latest" "jokeapi-nestjs:latest" "jokeapi-python:latest")
+images=("jokeapi-csharp:latest" "jokeapi-javalin:latest" "jokeapi-kotlin:latest" "jokeapi-nestjs:latest" "jokeapi-python:latest" "jokeapi-ruby:latest")
 if [ "$#" -gt 0 ]; then
   images=("$@")
 fi
