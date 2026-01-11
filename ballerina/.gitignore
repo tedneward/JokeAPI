@@ -1,0 +1,19 @@
+# Ballerina build and cache directories
+target/
+.ballerina/
+Ballerina.lock
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/lib/

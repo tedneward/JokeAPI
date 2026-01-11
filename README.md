@@ -58,3 +58,5 @@ Prompts used:
 
 > "In the python directory, create an API implementation that conforms to the same API as described in joke.api. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use FastAPI. Use a virtual environment. Make sure the unit tests pass, then make sure the scripts in the tests directory pass. Create a script to build a Docker image that uses the host's port 8000 to accept trffic, and should not use any host storage (no volumns). When that's done, run the Docker image and test it using the curl scripts."
 
+> "In the ballerina directory, create an API implementation using the Ballerina language that conforms to the API as described in joke.api. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Make sure the unit tests pass, then make sure the scripts in the tests directory pass. Create a script to build a Docker image that uses the host's port 8000 to accept trffic, and should not use any host storage (no volumns). When that's done, run the Docker image and test it using the curl scripts."
+

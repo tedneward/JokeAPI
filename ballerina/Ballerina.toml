@@ -1,0 +1,6 @@
+[project]
+org-name = "jokeapi"
+version = "0.1.0"
+
+[project.metadata]
+description = "JokeAPI Ballerina implementation"
