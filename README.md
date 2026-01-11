@@ -3,13 +3,16 @@ An API implemented in different languages and platforms for a joke database.
 
 The language/platforms:
 
-* `ballerina`: The Ballerina programming language
+* `ballerina`: The Ballerina programming language.
 * `csharp`: The C# programming language, using ASP.NET WebAPI
 * `javalin`: The Java programming language, using the Javalin framework.
 * `jolie`: The Jolie programming langauage.
-* `kotlin`: The Kotlin programming language.
-* `loopbackjs`: The JavaScript programming language, using the LoopbackJS framework.
-* `orleans`: The C# programming language, using the Microsoft Orleans framework.
+* `kotlin`: The Kotlin programming language, using Ktor.
+* `nestjs`: The JavaScript programming language, using the NestJS framework.
+* `python`: Python using FastAPI.
+* `ruby`: Ruby using Sinatra.
+
+The `minimal` directory is a bootstrapping hard-coded minimal implementation to verify the `joke.api` when I started. Eventually it should be deleted now that the project is bootstrapped into existence.
 
 The `tests` directory should contain `curl`-based tests to do end-to-end testing of any of the implementations.
 

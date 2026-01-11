@@ -1,0 +1,16 @@
+{
+  "models": [
+    {
+      "title": "Devstral",
+      "provider": "ollama",
+      "model": "devstral",
+      "apiBase": "http://localhost:11434"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Devstral",
+    "provider": "ollama",
+    "model": "devstral",
+    "apiBase": "http://localhost:11434"
+  }
+}
