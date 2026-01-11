@@ -1,0 +1,43 @@
+require 'rake'
+require 'rspec/core/rake_task'
+
+# Define default task
+task default: :spec
+
+# RSpec task
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = "spec/**/*_spec.rb"
+end
+
+# Database task
+namespace :db do
+  desc "Initialize database"
+  task :init do
+    require_relative 'lib/joke_api/database'
+    JokeAPI::Database.init
+    puts "Database initialized"
+  end
+
+  desc "Drop database"
+  task :drop do
+    require_relative 'lib/joke_api/database'
+    db_file = JokeAPI::Database::DB_FILE
+    File.delete(db_file) if File.exist?(db_file)
+    puts "Database dropped"
+  end
+
+  desc "Reset database"
+  task reset: [:drop, :init]
+end
+
+# Build task for Docker
+desc "Build application"
+task :build do
+  sh "bundle install"
+end
+
+# Start server task
+desc "Start the API server"
+task :server do
+  exec "ruby -I./lib bin/server.rb"
+end
