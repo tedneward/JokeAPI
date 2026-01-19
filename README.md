@@ -11,6 +11,7 @@ The language/platforms:
 * `nestjs`: The JavaScript programming language, using the NestJS framework.
 * `python`: Python using FastAPI.
 * `ruby`: Ruby using Sinatra.
+* `swift`: Swift 
 
 The `minimal` directory is a bootstrapping hard-coded minimal implementation to verify the `joke.api` when I started. Eventually it should be deleted now that the project is bootstrapped into existence.
 
@@ -64,4 +65,6 @@ Prompts used:
 > "In the ruby directory, create an API implementation in Ruby that conforms to the same API as described in joke.api. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Use an idiomatic Ruby library for the API layer. Use SQLite for data storage. Use a domain layer to represent business logic and a persistence layer to encapsulate the data storage. Use Rake and Gems for build and package dependencies. Make sure the unit tests pass, then make sure the scripts in the tests directory pass. Create a script to build a Docker image that uses the host's port 8000 to accept trffic, and should not use any host storage (no volumes). When that's done, run the Docker image and test it using the curl scripts."
 
 > "In the ballerina directory, create an API implementation using the Ballerina language that conforms to the API as described in joke.api. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Make sure the unit tests pass, then make sure the scripts in the tests directory pass. Create a script to build a Docker image that uses the host's port 8000 to accept trffic, and should not use any host storage (no volumns). When that's done, run the Docker image and test it using the curl scripts."
+
+> "In the swift directory, create an API implementation using the Swift language that conforms to the API as described in joke.api. Use the Vapor framework documented at https://github.com/vapor/vapor. Make sure this project has unit tests to test the functionality at the domain and persistence layers. Make sure the unit tests pass, then make sure the scripts in the tests directory pass. Create a script to build a Docker image that uses the host's port 8000 to accept trffic, and should not use any host storage (no volumns). When that's done, run the Docker image and test it using the curl scripts."
 

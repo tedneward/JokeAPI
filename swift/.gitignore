@@ -1,0 +1,84 @@
+# Swift Package Manager
+.build/
+*.xcodeproj
+*.xcworkspace
+Package.resolved
+.swiftpm/
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcworkspace
+*.playground
+xcuserdata/
+.Xcode.env
+DerivedData/
+
+# Build artifacts
+.build/
+.ninja_log
+.ninja_deps
+
+# IDE
+.vscode/
+.idea/
+*.swiftpm
+*.iml
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*~
+.~*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+db.sqlite
+db.sqlite-shm
+db.sqlite-wal
+
+# Logs
+*.log
+logs/
+log/
+
+# Runtime
+*.pid
+*.sock
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# IDE temporary files
+.LSOverride
+*.sublime-workspace
+*.sublime-project
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
