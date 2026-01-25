@@ -11,7 +11,7 @@ The language/platforms:
 * `nestjs`: The JavaScript programming language, using the NestJS framework.
 * `python`: Python using FastAPI.
 * `ruby`: Ruby using Sinatra.
-* `swift`: Swift 
+* `swift`: Swift using Vapor.
 
 The `minimal` directory is a bootstrapping hard-coded minimal implementation to verify the `joke.api` when I started. Eventually it should be deleted now that the project is bootstrapped into existence.
 
