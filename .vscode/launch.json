@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:JokeAPI}/swift",
+            "name": "Debug App (swift)",
+            "target": "App",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug App (swift)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:JokeAPI}/swift",
+            "name": "Release App (swift)",
+            "target": "App",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release App (swift)"
+        }
+    ]
+}
