@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", ".", "{B41BF331-FCCB-2ADF-CDB6-767964B34647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFAAF5F3-0826-0382-279F-15A025608506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokeApi", "src\JokeApi\JokeApi.csproj", "{04F6DE7C-FB10-184A-A161-C826345E7CDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3A48EA60-CB24-6603-8658-E3D34B7F9617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JokeApi.Tests", "tests\JokeApi.Tests\JokeApi.Tests.csproj", "{54C8FB50-AACC-FC11-F248-B0C2F2F7E356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04F6DE7C-FB10-184A-A161-C826345E7CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F6DE7C-FB10-184A-A161-C826345E7CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F6DE7C-FB10-184A-A161-C826345E7CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F6DE7C-FB10-184A-A161-C826345E7CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C8FB50-AACC-FC11-F248-B0C2F2F7E356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C8FB50-AACC-FC11-F248-B0C2F2F7E356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C8FB50-AACC-FC11-F248-B0C2F2F7E356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C8FB50-AACC-FC11-F248-B0C2F2F7E356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CFAAF5F3-0826-0382-279F-15A025608506} = {B41BF331-FCCB-2ADF-CDB6-767964B34647}
+		{04F6DE7C-FB10-184A-A161-C826345E7CDE} = {CFAAF5F3-0826-0382-279F-15A025608506}
+		{3A48EA60-CB24-6603-8658-E3D34B7F9617} = {B41BF331-FCCB-2ADF-CDB6-767964B34647}
+		{54C8FB50-AACC-FC11-F248-B0C2F2F7E356} = {3A48EA60-CB24-6603-8658-E3D34B7F9617}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E50E75-AD5D-4C98-83B2-39098C438A40}
+	EndGlobalSection
+EndGlobal
